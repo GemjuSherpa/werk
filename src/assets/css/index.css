@@ -1,0 +1,149 @@
+/* 
+    Licence: MIT
+
+    Author: Gemju Sherpa
+    Date: 17/08/2022
+
+    Description: CSS styling for landing page section
+    Design approach: Mobile first responssive design
+*/
+
+*, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    background-color: rgba(240, 248, 255, 0);
+}
+
+
+/* Screen size less than 768px  */
+
+/* landing div */
+.landing {
+    margin-top: 2rem;
+
+}
+
+.top-section {
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+/* Draw plain line */
+.left {
+    height: 1px;
+    width: 6vw;
+    background: black;
+    margin-bottom: 1rem;
+    margin-left: -1rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+}
+
+/* tag line */
+.right {
+    text-align: center;
+}
+
+.right .tag {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* Main title */
+.title{
+
+    font-size: 7vw;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+}
+
+/* description */
+.description{
+    margin-top: 2rem;
+}
+.description span{
+    font-weight: 400 !important;
+    opacity: 0.8;
+}
+
+/* lets talk button */
+.button-talk {
+    border: none;
+    background-color: rgb(56, 67, 5, .7);
+    width: 40vw;
+    height: 50px;
+    margin: 2rem 0 2rem 0;
+    color: black;
+}
+
+/* landing image section */
+.landing-image {
+    margin-bottom: 1rem;
+}
+
+.landing-image img {
+    width: 100%;
+    height: auto;
+} 
+
+
+/* for screen size above 769px */
+@media (min-width: 768px) {
+    .top-section{
+        flex-direction: row;
+        margin-left: 4rem;
+    }
+
+    .left{
+        top: 0;
+        left: 0;
+        margin-top: .8rem;
+        width: 2.5vw;
+    }
+
+    .right{
+        text-align: left;
+        margin-left: 4rem;
+    }
+
+    .title{
+        font-size: 4vw;
+        font-weight: 600 !important;
+        text-align: left;
+        line-height: normal;
+    }
+
+    .title-first-half::after{
+        content: "\a";
+        white-space: pre;
+        
+    }
+
+    .description{
+        font-size: 16pt;
+    }
+
+    .desc-second-half::before{
+        content: "\a";
+        white-space: pre;
+    }
+
+    .button-talk{
+        width: 150px;
+        height: 45px;
+    }
+
+    .button-talk:hover{
+        background-color: rgb(56, 67, 5);
+        color: white;
+    }
+}
+
+/* End of file */
+
+
